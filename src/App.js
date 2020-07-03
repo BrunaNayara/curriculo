@@ -1,24 +1,20 @@
-import React from 'react';
+import React,{useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+  const [aba, setAba] = useState("Sobre")
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <h1>Bruna Moreira</h1>
+        <h2> Jogo Animal Crossing</h2>
+        <h3>Bla bla bla</h3>
+
+        <button onClick={()=>setAba("Sobre")}>Sobre</button>
+        <button onClick={()=>setAba("Contato")}>Contato</button>
+        {aba === "Sobre" ? (<div id="Sobre">Sobre</div>):(<div id="Contato">Contato</div>) }
     </div>
   );
 }
